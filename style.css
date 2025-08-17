@@ -1,0 +1,152 @@
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(135deg, #afcdd8, #08569f);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.timer-container {
+  background: #dcecd3;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 300px;
+}
+
+#timer {
+  font-size: 64px;
+  color: #e098c9;
+  margin-bottom: 20px;
+}
+
+input[type="number"] {
+  padding: 12px;
+  font-size: 18px;
+  width: 100%;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  border: 2px solid #ffd6a5;
+  outline: none;
+  text-align: center;
+  background-color: #fff;
+  transition: border-color 0.3s;
+}
+
+input[type="number"]:focus {
+  border-color: #e098c9;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background-color: #e098c9;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+  background-color: #ff6f61;
+}
+
+.buttons button:active {
+  transform: scale(0.98);
+}
+.cloud {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: drift 60s linear infinite;
+  z-index: 0;
+}
+
+.cloud::before,
+.cloud::after {
+  content: '';
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+}
+
+.cloud1 {
+  width: 120px;
+  height: 60px;
+  top: 100px;
+  left: -150px;
+  animation-delay: 0s;
+}
+
+.cloud1::before {
+  width: 80px;
+  height: 80px;
+  top: -20px;
+  left: 20px;
+}
+
+.cloud1::after {
+  width: 100px;
+  height: 100px;
+  top: -30px;
+  left: 60px;
+}
+
+.cloud2 {
+  width: 100px;
+  height: 50px;
+  top: 250px;
+  left: -200px;
+  animation-delay: 20s;
+}
+
+.cloud2::before {
+  width: 60px;
+  height: 60px;
+  top: -10px;
+  left: 15px;
+}
+
+.cloud2::after {
+  width: 80px;
+  height: 80px;
+  top: -20px;
+  left: 45px;
+}
+
+.cloud3 {
+  width: 140px;
+  height: 70px;
+  top: 400px;
+  left: -180px;
+  animation-delay: 40s;
+}
+
+.cloud3::before {
+  width: 90px;
+  height: 90px;
+  top: -25px;
+  left: 25px;
+}
+
+.cloud3::after {
+  width: 110px;
+  height: 110px;
+  top: -35px;
+  left: 65px;
+}
+
+@keyframes drift {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(120vw);
+  }
+}
