@@ -6,7 +6,7 @@ function updateDisplay() {
 }
 
 function startTimer() {
-  if (interval) return; // Prevent multiple intervals
+  if (interval) return; 
   interval = setInterval(() => {
     timer++;
     updateDisplay();
@@ -22,4 +22,5 @@ function resetTimer() {
   pauseTimer();
   timer = 0;
   updateDisplay();
+
 }
